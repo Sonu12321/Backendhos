@@ -28,7 +28,7 @@ const app = express();
 
 // Middleware setup
 app.use(cors({
-    origin:process.env.ORIGIN,
+    origin:['https://hope-valley-medical-center.vercel.app/'],
     credentials: true
 }));
 
