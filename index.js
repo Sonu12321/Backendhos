@@ -32,7 +32,7 @@ const app = express();
 //     credentials: true
 // }));
 const corsOptions = {
-    origin: 'https://hope-valley-medical-center.vercel.app', // Specific origin
+    origin: ['https://hope-valley-medical-center.vercel.app', 'https://hope-valley-medical-center-admin.vercel.app'],// Specific origin
     credentials: true, // Allow credentials
     optionsSuccessStatus: 204 // Respond with 204 for preflight requests
   };
