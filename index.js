@@ -28,7 +28,7 @@ const app = express();
 
 // Middleware setup
 app.use(cors({
-    origin: [process.env.FRONTEND_URI, process.env.DASHBOARD_URI],
+    origin:process.env.ORIGIN,
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
