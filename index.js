@@ -27,10 +27,20 @@ cloudinary.v2.config({
 const app = express();
 
 // Middleware setup
-app.use(cors({
-    origin:'*',
-    credentials: true
-}));
+// app.use(cors({
+//     origin:'*',
+//     credentials: true
+// }));
+const corsOptions = {
+    origin: 'https://hope-valley-medical-center.vercel.app', // Specific origin
+    credentials: true, // Allow credentials
+    optionsSuccessStatus: 204 // Respond with 204 for preflight requests
+  };
+  
+  app.use(cors(corsOptions));
+  
+  // Handle preflight requests for all routes
+  app.options('*', cors(corsOptions));
 
 app.use(cookieParser());
 app.use(express.json());
